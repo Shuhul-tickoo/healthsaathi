@@ -1,4 +1,4 @@
-const OPENROUTER_API_KEY = "your_api_key_here";
+const OPENROUTER_API_KEY = "your_api_key_here_is_new";
 
 let userProfile = {};
 
