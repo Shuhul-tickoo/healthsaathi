@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HealthSaathi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌿 HealthSaathi</h1>
+    <p class="subtitle">Your personal Indian health companion</p>
+
+    <!-- PROFILE SECTION -->
+    <div class="card" id="profile-section">
+      <h2>Tell us about yourself</h2>
+
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Your name" />
+
+      <label>Age</label>
+      <input type="number" id="age" placeholder="e.g. 20" />
+
+      <label>Weight (kg)</label>
+      <input type="number" id="weight" placeholder="e.g. 65" />
+
+      <label>Height (cm)</label>
+      <input type="number" id="height" placeholder="e.g. 170" />
+
+      <label>Diet Type</label>
+      <select id="diet">
+        <option value="vegetarian">Vegetarian</option>
+        <option value="eggetarian">Eggetarian</option>
+        <option value="non-vegetarian">Non-Vegetarian</option>
+      </select>
+
+      <label>Health Goal</label>
+      <select id="goal">
+        <option value="lose weight">Lose Weight</option>
+        <option value="gain muscle">Gain Muscle</option>
+        <option value="stay fit">Stay Fit</option>
+        <option value="improve energy">Improve Energy</option>
+      </select>
+
+      <button onclick="saveProfile()">Save Profile</button>
+    </div>
+
+    <!-- DAILY LOG SECTION (hidden until profile saved) -->
+    <div class="card hidden" id="log-section">
+      <h2>Today's Log</h2>
+
+      <label>What did you eat today?</label>
+      <textarea id="food-log" placeholder="e.g. Dal chawal for lunch, poha in morning..."></textarea>
+
+      <label>What exercise did you do?</label>
+      <textarea id="exercise-log" placeholder="e.g. 30 min walk, 20 pushups..."></textarea>
+
+      <button onclick="getAdvice()">Get My Health Advice 🌿</button>
+    </div>
+
+    <!-- AI RESPONSE -->
+    <div class="card hidden" id="advice-section">
+      <h2>Your Health Coach Says...</h2>
+      <div id="advice-text">Loading...</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
